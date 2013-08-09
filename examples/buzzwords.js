@@ -54,9 +54,15 @@ function createRandomTask() {
         task.continue('downloading');
         task.postfix(percent + '%');
         if (percent === 100) {
-            task.postfix('https://github.com/' + Faker.Internet.domainWord() + '/' + Faker.random.bs_noun());
-            task.done();
-            return delay(Faker.random.number(500));
+            task.continue('parsing')
+                .postfix('');
+            return delay(Faker.random.number(1500))
+                .then(function(){
+                    task
+                        .postfix('https://github.com/' + Faker.Internet.domainWord() + '/' + Faker.random.bs_noun())
+                        .done();
+                    return Q.defer().promise;
+                });
         }
 
         return delay(Faker.random.number(500)).then(download);
