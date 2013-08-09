@@ -1,0 +1,44 @@
+{
+    "name": "taskwatch",
+    "description": "Live updating checklist on the command line. Great for long-running tasks.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/dylang/taskwatch",
+    "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/dylang/taskwatch.git"
+    },
+    "bugs": {
+        "url": "https://github.com/dylang/taskwatch/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/dylang/taskwatch/blob/master/LICENSE-MIT"
+        }
+    ],
+    "main": "lib/taskwatch",
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "scripts": {
+        "test": "grunt nodeunit"
+    },
+    "devDependencies": {
+        "grunt-contrib-jshint": "~0.6.0",
+        "grunt-contrib-watch": "~0.5.1",
+        "grunt": "~0.4.1",
+        "chai": "~1.7.2",
+        "grunt-notify": "~0.2.7",
+        "Faker": "~0.5.11",
+        "grunt-cafe-mocha": "~0.1.8"
+
+    },
+    "keywords": [],
+    "dependencies": {
+        "cli-color": "~0.2.2"
+    }
+}
