@@ -3,6 +3,12 @@
 var taskWatch = require('../lib/taskwatch');
 var Faker = require('Faker');
 var Q = require('q');
+var cliColor = require('cli-color');
+
+taskWatch.defaults({
+    width: 40,
+    prefix: cliColor.cyan('[Buzzwords] ')
+});
 
 function delay(ms) {
     var deferred = Q.defer();
@@ -15,16 +21,11 @@ function createRandomTask() {
     var task = taskWatch.add(Faker.Company.bs());
     var percent = 0;
 
-    function start() {
-        task.start();
-        return delay();
-    }
-
     function download () {
         percent =  Faker.random.number(100 - percent) + percent + 1;
 
-        task.continue('downloading');
-        task.postfix(percent + '%');
+        task.status('downloading')
+            .details(percent + '%');
         if (percent === 100) {
             return delay(500).then(parse);
         }
@@ -33,21 +34,21 @@ function createRandomTask() {
     }
 
     function parse() {
-        task.continue('parsing')
-            .postfix('');
+        task.status('parsing')
+            .details('');
 
         return delay(1500)
             .then(done);
     }
 
     function done() {
-        task.postfix('https://github.com/' + Faker.Internet.domainWord() + '/' + Faker.random.bs_noun())
-            .done();
+        task.done()
+            .details('https://github.com/' + Faker.Internet.domainWord() + '/' + Faker.random.bs_noun());
+
         return Q.defer().promise;
     }
 
     delay()
-        .then(start)
         .then(download)
         .fail(function(err){
             console.log('ERR', err);
