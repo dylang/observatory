@@ -1,6 +1,6 @@
 'use strict';
 
-var taskWatch = require('../lib/taskwatch');
+var observatory = require('../lib/observatory');
 var Faker = require('Faker');
 var Q = require('q');
 
@@ -12,7 +12,7 @@ function delay(ms) {
 
 function createRandomTask() {
 
-    var task = taskWatch.add('These lines will need to wrap abcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    var task = observatory.add('These lines will need to wrap abcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
     var percent = 0;
 
     function download () {

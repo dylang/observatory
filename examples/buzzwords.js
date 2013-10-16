@@ -3,7 +3,7 @@ var Faker = require('Faker');
 var Q = require('q');
 var cliColor = require('cli-color');
 
-var taskWatch = require('../lib/taskwatch').settings({
+var observatory = require('../lib/observatory').settings({
     width: 60,
     prefix: cliColor.cyan('[Buzzwords] ')
 });
@@ -17,7 +17,7 @@ function delay(ms) {
 
 function createRandomTask() {
 
-    var task = taskWatch.add(Faker.Company.bs());
+    var task = observatory.add(Faker.Company.bs());
     var percent = 0;
 
     function download () {
@@ -65,7 +65,7 @@ function randomlyAddMore() {
 }
 
 console.log('  ⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽');
-console.log('    Running Random Fake Taskwatch Commands  ');
+console.log('    Running Random Fake observatory Commands  ');
 console.log('  ⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺');
 randomlyAddMore();
 

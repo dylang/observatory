@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         cafemocha: {
-           taskwatch: {
+           observatory: {
                src: 'test/**/*.test.js',
                options: {
                    timeout: 10000,

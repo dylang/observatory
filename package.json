@@ -1,26 +1,26 @@
 {
-  "name": "taskwatch",
-  "description": "Live updating checklist on the command line. Great for long-running tasks.",
-  "version": "0.1.0",
-  "homepage": "https://github.com/dylang/taskwatch",
+  "name": "observatory",
+  "description": "Beautiful UI for showing tasks running on the command line.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dylang/observatory",
   "author": {
     "name": "Dylan Greene",
     "email": "dylang@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dylang/taskwatch.git"
+    "url": "git://github.com/dylang/observatory.git"
   },
   "bugs": {
-    "url": "https://github.com/dylang/taskwatch/issues"
+    "url": "https://github.com/dylang/observatory/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/dylang/taskwatch/blob/master/LICENSE-MIT"
+      "url": "https://github.com/dylang/observatory/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/taskwatch",
+  "main": "lib/observatory",
   "engines": {
     "node": ">= 0.8.0"
   },

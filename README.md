@@ -1,12 +1,6 @@
-# taskwatch [![Build Status](https://secure.travis-ci.org/dylang/taskwatch.png?branch=master)](http://travis-ci.org/dylang/taskwatch)
+# observatory [![Build Status](https://secure.travis-ci.org/dylang/observatory.png?branch=master)](http://travis-ci.org/dylang/observatory)
 
-Live updating checklist on the command line. Great for long-running tasks.
-
-# taskwatch
-# taskwatcher
-# statusboard
-# statuslogger
-> Beautiful UI for showing tasks run on the command line. 
+> Beautiful UI for showing tasks running on the command line.
 
 ## Purpose
 
@@ -25,15 +19,15 @@ Instead of just logging long running tasks to the console, give your users a sim
 ## Installation
 
 ```bash
-$ npm -g install taskwatch
+$ npm -g install observatory
 ```
 ## Usage
 
 ```js
-var taskWatch = require('taskwatch')
+var observatory = require('observatory')
 
 //add a task to display
-var task = taskWatch.add('Install packages...');
+var task = observatory.add('Install packages...');
 
 //while working on the task, update the status
 task.running('Copying Files');
@@ -62,7 +56,7 @@ task.fail('Ooops');
 
 ## API
 
-### `taskWatch.add(description)`
+### `observatory.add(description)`
 
 `description` _string_ Required description.  
 **returns** a new `task`
@@ -70,7 +64,7 @@ task.fail('Ooops');
 Adds a task to the console. This method returns a `task` object, you should store it in a variable so you can use it for the methods bellow.
 
 ```
-var copyFilesTask = taskWatch.add('Copy files');
+var copyFilesTask = observatory.add('Copy files');
 ```
 
 ## Task Methods
@@ -118,7 +112,7 @@ Examples:
 
 ## Override Settings
 
-### `taskWatch.settings(settingsObject)`
+### `observatory.settings(settingsObject)`
 
 Tweak how tasks are rendered. 
 
@@ -128,23 +122,23 @@ Tweak how tasks are rendered.
 * `prefix` Sting, Text to prepend each line. Default is `' ⫸  '`.
 * `formatStatus` Function(statusLabel, STATE)
 
-> **returns** `taskWatch` so you can use it on the `require` statement.
+> **returns** `observatory` so you can use it on the `require` statement.
 
 ```
-var taskWatch = require('taskwatch').settings({
+var observatory = require('observatory').settings({
   prefix: '[bower] '.white
 });
 ```
 
-### taskWatch.STATE
+### observatory.STATE
 
 A constant for the different states. Only useful if you need to change `formatStatus` above.
 
 The values:
 
-* `taskWatch.STATE.active` Defaults to using default console color.
-* `taskWatch.STATE.done` Defaults to using green.
-* `taskWatch.STATE.fail` Defaults to using red.
+* `observatory.STATE.active` Defaults to using default console color.
+* `observatory.STATE.done` Defaults to using green.
+* `observatory.STATE.fail` Defaults to using red.
 
 ## Acknowledgements
 
@@ -160,7 +154,7 @@ The values:
 * cli-color, used for coloring text and moving the cursor. It does not modify the `string` prototype and supports moving the cursor around. Feel free to use any coloring library to color the text.
 
 ## Release History
-* 11 Aug 2013 - 0.1.0 - First version
+* 15 October 2013 - 0.0.1 - First version
 
 ## License
 Copyright (c) 2013 Dylan Greene  
