@@ -91,7 +91,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-notify');
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'nodeunit']);
+    grunt.registerTask('default', ['jshint', 'cafemocha']);
     grunt.registerTask('test', ['jshint', 'cafemocha']);
 
 };

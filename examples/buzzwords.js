@@ -1,14 +1,13 @@
 'use strict';
-
-var taskWatch = require('../lib/taskwatch');
 var Faker = require('Faker');
 var Q = require('q');
 var cliColor = require('cli-color');
 
-taskWatch.defaults({
-    width: 40,
+var taskWatch = require('../lib/taskwatch').settings({
+    width: 60,
     prefix: cliColor.cyan('[Buzzwords] ')
 });
+
 
 function delay(ms) {
     var deferred = Q.defer();
