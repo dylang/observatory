@@ -4,8 +4,8 @@ var Q = require('q');
 var cliColor = require('cli-color');
 
 var observatory = require('../lib/observatory').settings({
-    width: 60,
-    prefix: cliColor.cyan('[Buzzwords] ')
+    width: 55,
+    prefix: cliColor.cyan('[Buzz] ')
 });
 
 

@@ -1,4 +1,4 @@
-# observatory [![Build Status](https://secure.travis-ci.org/dylang/observatory.png?branch=master)](http://travis-ci.org/dylang/observatory)
+# Observatory [![Build Status](https://secure.travis-ci.org/dylang/observatory.png?branch=master)](http://travis-ci.org/dylang/observatory)
 
 > Beautiful UI for showing tasks running on the command line.
 
@@ -6,25 +6,28 @@
 
 Instead of just logging long running tasks to the console, give your users a simple status dashboard.
 
-## Example UI's built with statusfrog
-
-### Running tests
-
-### Installing depedencies
-
-### Compressing images
-
-### Server Messages
+![observatory](https://f.cloud.github.com/assets/51505/1339977/2cccefbe-361a-11e3-9cca-3bcf74f7e59b.gif)
 
 ## Installation
 
 ```bash
 $ npm -g install observatory
 ```
-## Usage
+
+## Examples
+
+### `node ./examples/buzzwords.js`
+
+An example using fake data that tries to look like a real-world usage.
+
+### `node ./examples/long-line.js`
+
+An example of what happens when text is so long it needs to wrap to another line.
+
+## Usage Example
 
 ```js
-var observatory = require('observatory')
+var observatory = require('observatory');
 
 //add a task to display
 var task = observatory.add('Install packages...');
@@ -46,12 +49,11 @@ task.done('Finished!');
 task.fail('Ooops');
 ```
 
-## Terms
+## Terminology
 
 ```text
-[Test Runner] Running tests on Chrome          Done!
-[Test Runner] Running tests on Safari  Running 35/90  CSS3 Tests
-⇧ prefix      ⇧ description            ⇧    status ⇧  ⇧ details
+[Test Runner] Running tests on Safari  Running Now  50%  CSS3 Tests
+⇧ prefix      ⇧ description            ⇧ status     ⇧ details
 ```
 
 ## API
