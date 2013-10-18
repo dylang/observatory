@@ -36,8 +36,16 @@
     "Faker": "~0.5.11",
     "grunt-cafe-mocha": "~0.1.8"
   },
-  "keywords": ["task", "watch", "status", "bower", "bower logger", "logging"],
+  "keywords": [
+    "task",
+    "watch",
+    "status",
+    "bower",
+    "bower logger",
+    "logging"
+  ],
   "dependencies": {
-    "cli-color": "~0.2.2"
+    "cli-color": "~0.2.2",
+    "lodash": "~2.2.1"
   }
 }
