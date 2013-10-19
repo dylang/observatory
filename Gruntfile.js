@@ -2,6 +2,12 @@
 
 module.exports = function (grunt) {
 
+    // These plugins provide necessary tasks.
+    grunt.loadNpmTasks('grunt-cafe-mocha');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-notify');
+
     // Project configuration.
     grunt.initConfig({
         cafemocha: {
@@ -10,7 +16,7 @@ module.exports = function (grunt) {
                options: {
                    timeout: 10000,
                    ui: 'bdd',
-                   reporter: 'min', //'spec',
+                   reporter: 'spec',
                    require: [
                        'chai'
                    ]
@@ -71,27 +77,36 @@ module.exports = function (grunt) {
         watch: {
             gruntfile: {
                 files: '<%= jshint.gruntfile.src %>',
-                tasks: ['jshint:gruntfile']
+                tasks: [
+                    'jshint:gruntfile'
+                ]
             },
             lib: {
-                files: '<%= jshint.lib.src %>, <%= jshint.test.src %>',
+                files: [
+                    'lib/**/*.js',
+                    'test/**/*.test.js'
+                ],
                 tasks: [
                     'jshint:lib',
                     'jshint:test',
+                    'jshint:examples',
                     'cafemocha'
                 ]
             }
         }
     });
 
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-cafe-mocha');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-notify');
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'cafemocha']);
-    grunt.registerTask('test', ['jshint', 'cafemocha']);
+    grunt.registerTask('default', [
+        'jshint',
+        'cafemocha',
+        'watch'
+    ]);
+
+    grunt.registerTask('test', [
+        'jshint',
+        'cafemocha'
+    ]);
 
 };

@@ -18,9 +18,6 @@ function delay(ms) {
 function createRandomTask() {
 
     var task = observatory
-        .settings({
-            prefix: '>> '
-        })
         .add(Faker.Company.bs());
     var percent = 0;
 
