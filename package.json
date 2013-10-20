@@ -1,7 +1,7 @@
 {
   "name": "observatory",
   "description": "Beautiful UI for showing tasks running on the command line.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/dylang/observatory",
   "author": {
     "name": "Dylan Greene",
@@ -42,7 +42,7 @@
     "watch",
     "status",
     "bower",
-    "bower logger",
+    "bower log",
     "logging"
   ],
   "dependencies": {
