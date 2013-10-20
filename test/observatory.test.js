@@ -3,6 +3,8 @@ var expect = require('chai').expect;
 var observatory = require('../lib/observatory.js');
 var Faker = require('Faker');
 
+observatory.settings({write: function(text){return text;    }});
+
 describe('observatory', function () {
     describe('addTask', function () {
 
@@ -48,7 +50,6 @@ describe('observatory', function () {
         });
     });
 
-
     describe('change status text', function () {
 
         it('', function () {
@@ -60,6 +61,4 @@ describe('observatory', function () {
                 .done('done!');
         });
     });
-
-
 });

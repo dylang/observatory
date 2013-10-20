@@ -122,6 +122,7 @@ Tweak how tasks are rendered.
 
 * `width` Integer, width in _characters_ of the `description` and `status` area. This is used to right justify the `status`. Default is `55`.
 * `prefix` Sting, Text to prepend each line. Default is `' ⫸  '`.
+* `write` Function(content). Writes the content to the output. Defaults to `process.stdout.write`.
 * `formatStatus` Function(statusLabel, STATE)
 
 > **returns** `observatory` so you can use it on the `require` statement.
@@ -156,6 +157,7 @@ The values:
 * cli-color, used for coloring text and moving the cursor. It does not modify the `string` prototype and supports moving the cursor around. Feel free to use any coloring library to color the text.
 
 ## Release History
+* 20 October 2013 - 0.1.0 - Some cleanup thanks to @nickheiner, new write method.
 * 15 October 2013 - 0.0.1 - First version
 
 ## License
