@@ -1,7 +1,7 @@
 {
   "name": "observatory",
   "description": "Beautiful UI for showing tasks running on the command line.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/dylang/observatory",
   "author": {
     "name": "Dylan Greene",
@@ -34,10 +34,19 @@
     "chai": "~1.8.1",
     "grunt-notify": "~0.2.7",
     "Faker": "~0.5.11",
-    "grunt-cafe-mocha": "~0.1.8"
+    "grunt-cafe-mocha": "~0.1.8",
+    "q": "~0.9.7"
   },
-  "keywords": ["task", "watch", "status", "bower", "bower logger", "logging"],
+  "keywords": [
+    "task",
+    "watch",
+    "status",
+    "bower",
+    "bower log",
+    "logging"
+  ],
   "dependencies": {
-    "cli-color": "~0.2.2"
+    "cli-color": "~0.2.2",
+    "lodash": "~2.2.1"
   }
 }

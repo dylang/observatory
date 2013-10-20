@@ -17,7 +17,8 @@ function delay(ms) {
 
 function createRandomTask() {
 
-    var task = observatory.add(Faker.Company.bs());
+    var task = observatory
+        .add(Faker.Company.bs());
     var percent = 0;
 
     function download () {
