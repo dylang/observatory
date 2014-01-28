@@ -1,7 +1,7 @@
 {
   "name": "observatory",
   "description": "Beautiful UI for showing tasks running on the command line.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/dylang/observatory",
   "author": {
     "name": "Dylan Greene",
@@ -28,14 +28,14 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-watch": "~0.5.1",
     "grunt": "~0.4.1",
     "chai": "~1.8.1",
     "grunt-notify": "~0.2.7",
     "Faker": "~0.5.11",
     "grunt-cafe-mocha": "~0.1.8",
-    "q": "~0.9.7"
+    "q": "~1.0.0"
   },
   "keywords": [
     "task",
@@ -47,6 +47,6 @@
   ],
   "dependencies": {
     "cli-color": "~0.2.2",
-    "lodash": "~2.2.1"
+    "lodash": "~2.4.1"
   }
 }
