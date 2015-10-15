@@ -1,12 +1,12 @@
 'use strict';
 
 var observatory = require('../lib/observatory');
-var Faker = require('faker');
-var Q = require('q');
+var faker = require('faker');
+var q = require('q');
 
 function delay(ms) {
-    var deferred = Q.defer();
-    setTimeout(deferred.resolve, Faker.random.number(ms || 2000));
+    var deferred = q.defer();
+    setTimeout(deferred.resolve, faker.random.number(ms || 2000));
     return deferred.promise;
 }
 

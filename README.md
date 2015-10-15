@@ -150,16 +150,13 @@ The values:
 * My coworker Nick at Opower for inspiring the need for this library.
 * Bower, inspiring the clean layout.
 * Inqurire.js, for showing console apps can have a nice UI.
-* Grunt, for making it easy and fun to build the kind of tasks that could benefit from this.
 
-### Dependencies
-
-* cli-color, used for coloring text and moving the cursor. It does not modify the `string` prototype and supports moving the cursor around. Feel free to use any coloring library to color the text.
 
 ## Release History
+* 15 October 2015 - 1.0.0 - Update dependencies, fix tests and bugs thanks to @rstacruz.
 * 20 October 2013 - 0.1.0 - Some cleanup thanks to @nickheiner, new write method.
 * 15 October 2013 - 0.0.1 - First version
 
 ## License
-Copyright (c) 2013 Dylan Greene  
+Copyright (c) 2015 Dylan Greene  
 Licensed under the MIT license.

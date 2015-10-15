@@ -1,33 +1,33 @@
 'use strict';
-var Faker = require('faker');
-var Q = require('q');
-var cliColor = require('cli-color');
+var faker = require('faker');
+var q = require('q');
+var chalk = require('chalk');
 
 var observatory = require('../lib/observatory').settings({
     width: 55,
-    prefix: cliColor.cyan('[Buzz] ')
+    prefix: chalk.cyan('[Buzz] ')
 });
 
 
 function delay(ms) {
-    var deferred = Q.defer();
-    setTimeout(deferred.resolve, Faker.random.number(ms || 2000));
+    var deferred = q.defer();
+    setTimeout(deferred.resolve, faker.random.number(ms || 2000));
     return deferred.promise;
 }
 
 function createRandomTask() {
 
     var task = observatory
-        .add(Faker.company.bs());
+        .add(faker.company.bs());
     var percent = 0;
 
     function download () {
-        percent =  Faker.random.number(100 - percent) + percent + 1;
+        percent =  faker.random.number(100 - percent) + percent;
 
         task.status('downloading')
             .details(percent + '%');
-        if (percent === 100) {
-            return delay(500).then(parse);
+        if (percent > 98) {
+            return delay(100).then(parse);
         }
 
         return delay(500).then(download);
@@ -43,9 +43,9 @@ function createRandomTask() {
 
     function done() {
         task.done()
-            .details('https://github.com/' + Faker.internet.domainWord() + '/' + Faker.company.bsNoun());
+            .details('https://github.com/' + faker.internet.domainWord() + '/' + faker.company.bsNoun());
 
-        return Q.defer().promise;
+        return q.defer().promise;
     }
 
     delay()
