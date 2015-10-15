@@ -1,4 +1,4 @@
-# Observatory [![Build Status](https://secure.travis-ci.org/dylang/observatory.png?branch=master)](http://travis-ci.org/dylang/observatory)
+# Observatory [![Build Status](https://secure.travis-ci.org/dylang/observatory.svg?branch=master)](http://travis-ci.org/dylang/observatory)
 
 > Beautiful UI for showing tasks running on the command line.
 
