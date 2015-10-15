@@ -25,16 +25,13 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "mocha && jshint lib test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-watch": "~0.5.1",
-    "grunt": "~0.4.1",
-    "chai": "~1.8.1",
-    "grunt-notify": "~0.2.7",
     "Faker": "~0.5.11",
-    "grunt-cafe-mocha": "~0.1.8",
+    "chai": "3.3.0",
+    "jshint": "2.8.0",
+    "mocha": "2.3.3",
     "q": "~1.0.0"
   },
   "keywords": [
