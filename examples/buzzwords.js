@@ -1,5 +1,5 @@
 'use strict';
-var Faker = require('Faker');
+var Faker = require('faker');
 var Q = require('q');
 var cliColor = require('cli-color');
 
@@ -18,7 +18,7 @@ function delay(ms) {
 function createRandomTask() {
 
     var task = observatory
-        .add(Faker.Company.bs());
+        .add(Faker.company.bs());
     var percent = 0;
 
     function download () {
@@ -43,7 +43,7 @@ function createRandomTask() {
 
     function done() {
         task.done()
-            .details('https://github.com/' + Faker.Internet.domainWord() + '/' + Faker.random.bs_noun());
+            .details('https://github.com/' + Faker.internet.domainWord() + '/' + Faker.company.bsNoun());
 
         return Q.defer().promise;
     }
