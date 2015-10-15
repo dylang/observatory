@@ -1,0 +1,11 @@
+{
+  "maxerr": 10000,       // keep running no matter how many errors were found
+  "globalstrict": true,  // allows 'use strict' with single quotes
+  "newcap": false,       // allows  functions to be capitalized without New
+  "node": true,
+  "expr": true,          // allow expressions like foo.ok;
+  "globals": {
+    "describe": true,
+    "it": true
+  }
+}
