@@ -28,8 +28,8 @@
     "test": "mocha && jshint lib test"
   },
   "devDependencies": {
-    "Faker": "~0.5.11",
     "chai": "3.3.0",
+    "faker": "3.0.1",
     "jshint": "2.8.0",
     "mocha": "2.3.3",
     "q": "~1.0.0"

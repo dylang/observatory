@@ -1,7 +1,7 @@
 'use strict';
 
 var observatory = require('../lib/observatory');
-var Faker = require('Faker');
+var Faker = require('faker');
 var Q = require('q');
 
 function delay(ms) {
