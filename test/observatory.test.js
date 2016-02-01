@@ -3,7 +3,9 @@ var expect = require('chai').expect;
 var observatory = require('../lib/observatory.js');
 var Faker = require('faker');
 
-observatory.settings({write: function(text){return text;    }});
+observatory.settings({
+    stream: { write: function () {} }
+});
 
 describe('observatory', function () {
     describe('addTask', function () {
