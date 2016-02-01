@@ -18,7 +18,7 @@ function delay(ms) {
 function createRandomTask() {
 
     var task = observatory
-        .add(faker.company.bs());
+        .add(faker.Company.bs());
     var percent = 0;
 
     function download () {
@@ -42,8 +42,9 @@ function createRandomTask() {
     }
 
     function done() {
+        var noun = faker.Company.bs().split(' ')[2];
         task.done()
-            .details('https://github.com/' + faker.internet.domainWord() + '/' + faker.company.bsNoun());
+            .details('https://github.com/' + faker.Internet.domainWord() + '/' + noun);
 
         return q.defer().promise;
     }
