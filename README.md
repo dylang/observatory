@@ -11,7 +11,7 @@ Instead of just logging long running tasks to the console, give your users a sim
 ## Installation
 
 ```bash
-$ npm -g install observatory
+$ npm install observatory
 ```
 
 ## Examples
