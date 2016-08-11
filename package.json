@@ -36,7 +36,6 @@
   ],
   "dependencies": {
     "ansi-escapes": "^1.1.0",
-    "chalk": "^1.1.1",
-    "lodash": "^3.10.1"
+    "chalk": "^1.1.1"
   }
 }
