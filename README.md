@@ -33,7 +33,7 @@ var observatory = require('observatory');
 var task = observatory.add('Install packages...');
 
 //while working on the task, update the status
-task.running('Copying Files');
+task.status('Copying Files');
 
 //optionally give details
 task.details(percent + '% ' + filename);
