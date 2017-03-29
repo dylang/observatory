@@ -33,7 +33,7 @@ var observatory = require('observatory');
 var task = observatory.add('Install packages...');
 
 //while working on the task, update the status
-task.running('Copying Files');
+task.status('Copying Files');
 
 //optionally give details
 task.details(percent + '% ' + filename);
@@ -60,7 +60,7 @@ task.fail('Ooops');
 
 ### `observatory.add(description)`
 
-`description` _string_ Required description.  
+`description` _string_ Required description.
 **returns** a new `task`
 
 Adds a task to the console. This method returns a `task` object, you should store it in a variable so you can use it for the methods bellow.
@@ -116,7 +116,7 @@ Examples:
 
 ### `observatory.settings(settingsObject)`
 
-Tweak how tasks are rendered. 
+Tweak how tasks are rendered.
 
 `settingsObject`
 
@@ -158,5 +158,5 @@ The values:
 * 15 October 2013 - 0.0.1 - First version
 
 ## License
-Copyright (c) 2015 Dylan Greene  
+Copyright (c) 2015 Dylan Greene
 Licensed under the MIT license.
