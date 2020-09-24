@@ -11,7 +11,7 @@ describe('observatory', function () {
         it('addTask simple', function () {
             var label = Faker.company.catchPhrase();
             var task = observatory.add(label);
-            expect(task).to.be.an.object;
+            expect(task).to.be.an('object');
         });
 
     });
